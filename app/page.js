@@ -59,7 +59,7 @@ export default function PrankPage() {
 
       {/* لمسة إضافية */}
       <div style={{ marginTop: '30px', fontSize: '1.2rem', color: '#888' }}>
-        جاري جلط المتابعين... ⏳
+       ازرب عليج والله... ⏳
       </div>
 
     </div>
