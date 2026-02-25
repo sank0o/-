@@ -30,9 +30,9 @@ export default function PrankPage() {
 
       {/* ملصقات تناسب الكلام */}
       <div style={{ fontSize: '5rem', marginBottom: '20px' }}>
-        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}>💩</span>
-        <span style={{ display: 'inline-block', animation: 'spin 3s linear infinite', margin: '0 15px' }}>🖋️</span>
-        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}>😂</span>
+        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}>🌻</span>
+        <span style={{ display: 'inline-block', animation: 'spin 3s linear infinite', margin: '0 15px' }}>💵</span>
+        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}>😍</span>
       </div>
 
       {/* النص الأساسي */}
@@ -42,7 +42,7 @@ export default function PrankPage() {
         margin: '0', 
         fontWeight: 'bold' 
       }}>
-        بهلول القفاصه
+        بهلول 
       </h1>
 
       {/* الرسالة التحتية */}
@@ -54,7 +54,7 @@ export default function PrankPage() {
         padding: '10px 20px',
         borderRadius: '10px'
       }}>
-        تاج راسكم🖋️🍑
+        تاج راسكم🍑
       </p>
 
       {/* لمسة إضافية */}
