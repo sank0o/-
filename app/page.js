@@ -42,7 +42,7 @@ export default function PrankPage() {
         margin: '0', 
         fontWeight: 'bold' 
       }}>
-        ملاك أم البعرور
+        بهلول القفاصه
       </h1>
 
       {/* الرسالة التحتية */}
@@ -54,12 +54,12 @@ export default function PrankPage() {
         padding: '10px 20px',
         borderRadius: '10px'
       }}>
-        الولد بعده القلم بطيزه 🖋️🍑
+        تاج راسكم🖋️🍑
       </p>
 
       {/* لمسة إضافية */}
       <div style={{ marginTop: '30px', fontSize: '1.2rem', color: '#888' }}>
-       ازرب عليج والله... ⏳
+       واحد عراق... ⏳
       </div>
 
     </div>
