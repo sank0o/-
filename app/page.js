@@ -1,54 +1,78 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى مينا</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; }
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .animate-pop {
-            animation: pop 0.5s ease-out;
-        }
-        @keyframes pop {
-            0% { transform: scale(0.9); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-br from-gray-900 via-black to-red-900 min-h-screen flex items-center justify-center p-6">
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}'use client';
+import React from 'react';
 
-    <div class="glass p-8 rounded-3xl shadow-2xl max-w-md w-full text-center animate-pop">
-        <h1 class="text-4xl font-bold text-white mb-6 border-b border-red-500 pb-4 tracking-wide">
-            مـيـنـا 📸
-        </h1>
-        
-        <div class="space-y-6">
-            <p class="text-2xl text-red-100 leading-relaxed font-medium">
-                حاط العباس عليج إذا طلعنا وما صورتيني عدل
-            </p>
-            
-            <div class="py-4">
-                <span class="text-5xl">⚠️</span>
-            </div>
+export default function PrankPage() {
+  return (
+    <div style={{ 
+      height: '100vh', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      direction: 'rtl',
+      textAlign: 'center',
+      background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', // خلفية رمادية هادئة للتمويه
+      margin: 0,
+      overflow: 'hidden'
+    }}>
+      
+      {/* ستايل الأنيميشن للملصقات المضحكة */}
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+      `}</style>
 
-            <p class="text-3xl font-bold text-red-500 bg-red-500/10 py-3 rounded-xl">
-                خرا عليج ا
-            </p>
-        </div>
+      {/* ملصقات تناسب الكلام */}
+      <div style={{ fontSize: '5rem', marginBottom: '20px' }}>
+        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}></span>
+        <span style={{ display: 'inline-block', animation: 'spin 3s linear infinite', margin: '0 15px' }}></span>
+        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}></span>
+      </div>
 
-        <div class="mt-8 flex justify-center space-x-4 space-x-reverse">
-            <span class="inline-block w-3 h-3 rounded-full bg-red-600 animate-pulse"></span>
-            <span class="inline-block w-3 h-3 rounded-full bg-red-600 animate-pulse delay-75"></span>
-            <span class="inline-block w-3 h-3 rounded-full bg-red-600 animate-pulse delay-150"></span>
-        </div>
+      {/* النص الأساسي */}
+      <h1 style={{ 
+        fontSize: '3.5rem', 
+        color: '#333', 
+        margin: '0', 
+        fontWeight: 'bold' 
+      }}>
+   مينا 
+      </h1>
+
+      {/* الرسالة التحتية */}
+      <p style={{ 
+        fontSize: '1.8rem', 
+        color: '#555', 
+        marginTop: '20px',
+        backgroundColor: '#eee',
+        padding: '10px 20px',
+        borderRadius: '10px'
+      }}>
+    حاط العباس عليج إذا طلعنا وما صورتيني عدل
+      </p>
+
+      {/* لمسة إضافية */}
+      <div style={{ marginTop: '30px', fontSize: '1.2rem', color: '#888' }}>
+      خرا عليج... ⏳
+      </div>
+
     </div>
-
-</body>
-</html>
+  );
+}
