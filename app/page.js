@@ -1,78 +1,21 @@
-{
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  }
-}'use client';
-import React from 'react';
-
-export default function PrankPage() {
+export default function Page() {
   return (
-    <div style={{ 
-      height: '100vh', 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      justifyContent: 'center', 
-      direction: 'rtl',
-      textAlign: 'center',
-      background: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)', // خلفية رمادية هادئة للتمويه
-      margin: 0,
-      overflow: 'hidden'
-    }}>
-      
-      {/* ستايل الأنيميشن للملصقات المضحكة */}
-      <style>{`
-        @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-20px); }
-        }
-      `}</style>
+    <div dir="rtl" className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-4 font-sans">
+      <div className="border-2 border-red-600 p-10 rounded-3xl text-center shadow-[0_0_50px_rgba(220,38,38,0.3)]">
+        <h1 className="text-5xl font-bold mb-8 tracking-tighter text-red-600">مـيـنـا 📸</h1>
+        
+        <div className="space-y-6">
+          <p className="text-2xl font-medium text-gray-200">
+            حاط العباس عليج إذا طلعنا وما صورتيني عدل
+          </p>
+          
+          <div className="text-6xl animate-bounce">⚠️</div>
 
-      {/* ملصقات تناسب الكلام */}
-      <div style={{ fontSize: '5rem', marginBottom: '20px' }}>
-        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}></span>
-        <span style={{ display: 'inline-block', animation: 'spin 3s linear infinite', margin: '0 15px' }}></span>
-        <span style={{ display: 'inline-block', animation: 'bounce 1s infinite' }}></span>
+          <p className="text-4xl font-black text-white bg-red-600 px-6 py-2 rounded-lg rotate-1">
+            خرا عليج ا
+          </p>
+        </div>
       </div>
-
-      {/* النص الأساسي */}
-      <h1 style={{ 
-        fontSize: '3.5rem', 
-        color: '#333', 
-        margin: '0', 
-        fontWeight: 'bold' 
-      }}>
-   مينا 
-      </h1>
-
-      {/* الرسالة التحتية */}
-      <p style={{ 
-        fontSize: '1.8rem', 
-        color: '#555', 
-        marginTop: '20px',
-        backgroundColor: '#eee',
-        padding: '10px 20px',
-        borderRadius: '10px'
-      }}>
-    حاط العباس عليج إذا طلعنا وما صورتيني عدل
-      </p>
-
-      {/* لمسة إضافية */}
-      <div style={{ marginTop: '30px', fontSize: '1.2rem', color: '#888' }}>
-      خرا عليج... ⏳
-      </div>
-
     </div>
   );
 }
