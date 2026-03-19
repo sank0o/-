@@ -2,48 +2,86 @@
 
 export default function Page() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 overflow-hidden relative" 
-         style={{ background: 'linear-gradient(-45deg, #000000, #1a0505, #4c0505, #000000)', backgroundSize: '400% 400%', animation: 'gradient-x 15s ease infinite' }}>
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px',
+      background: 'linear-gradient(-45deg, #000000, #2a0000, #4a0000, #000000)',
+      backgroundSize: '400% 400%',
+      animation: 'gradientBG 10s ease infinite',
+      fontFamily: 'Arial, sans-serif',
+      color: 'white',
+      textAlign: 'center',
+      direction: 'rtl'
+    }}>
       
-      <style jsx global>{`
-        @keyframes gradient-x {
-          0%, 100% { background-position: 0% 50% }
-          50% { background-position: 100% 50% }
+      <style>{`
+        @keyframes gradientBG {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
-        @keyframes fadeInDown {
-          from { opacity: 0; transform: translateY(-20px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes popIn {
+          from { transform: scale(0.5); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
         }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes pulse {
+          0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+          70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); }
+          100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
         }
       `}</style>
 
-      <div className="relative z-10 w-full max-w-lg transition-transform duration-500 hover:scale-[1.02]">
-        <div className="bg-gray-900/70 backdrop-blur-xl rounded-[30px] p-10 md:p-14 border-4 border-black shadow-[10px_10px_0px_#000]">
-          
-          <div className="text-center mb-10" style={{ animation: 'fadeInDown 1s ease-out' }}>
-            <h1 className="text-7xl font-black tracking-tighter text-white font-serif relative inline-block">
-              مـيـنـا
-              <span className="absolute bottom-0 left-0 w-full h-2 bg-red-600 rounded-full"></span>
-            </h1>
-          </div>
-          
-          <div className="space-y-8" style={{ animation: 'fadeInUp 1s ease-out 0.5s both' }}>
-            <div className="bg-black/50 p-6 rounded-2xl border-r-4 border-red-500 text-right">
-              <p className="text-3xl font-bold text-white leading-snug">
-                حاط <span className="text-red-500 underline decoration-wavy">العباس عليج</span> إذا طلعنا وما صورتيني عدل
-              </p>
-            </div>
-            
-            <div className="text-center mt-12 overflow-hidden rounded-xl border-4 border-red-600 shadow-[8px_8px_0px_#7f1d1d]">
-              <p className="text-5xl font-black text-white bg-red-600 py-4 px-6 animate-pulse">
-                خرا عليج ا
-              </p>
-            </div>
-          </div>
+      <div style={{
+        background: 'rgba(20, 20, 20, 0.8)',
+        backdropFilter: 'blur(15px)',
+        padding: '50px',
+        borderRadius: '40px',
+        border: '4px solid #cc0000',
+        boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+        maxWidth: '500px',
+        width: '100%',
+        animation: 'popIn 0.8s ease-out'
+      }}>
+        
+        <h1 style={{ 
+          fontSize: '4rem', 
+          margin: '0 0 30px 0', 
+          color: '#ff0000',
+          textShadow: '3px 3px 0px #fff'
+        }}>
+          مـيـنـا 📸
+        </h1>
 
+        <div style={{
+          fontSize: '1.8rem',
+          lineHeight: '1.6',
+          marginBottom: '40px',
+          fontWeight: 'bold'
+        }}>
+          حاط <span style={{ color: '#ff4d4d', textDecoration: 'underline' }}>العباس عليج</span> 
+          <br /> 
+          إذا طلعنا وما صورتيني عدل
+        </div>
+
+        <div style={{
+          background: '#ff0000',
+          color: 'white',
+          fontSize: '2.5rem',
+          fontWeight: '900',
+          padding: '20px',
+          borderRadius: '15px',
+          display: 'inline-block',
+          width: '100%',
+          animation: 'pulse 1.5s infinite'
+        }}>
+          خرا عليج ا
+        </div>
+
+        <div style={{ marginTop: '30px', opacity: '0.5' }}>
+          ⚠️ عاجل جداً ⚠️
         </div>
       </div>
     </div>
